@@ -1,0 +1,43 @@
+body {
+  background-color: #f0f8ff; /* Light blue background */
+  font-family: Arial, sans-serif; /* Modern font */
+}
+
+.text-primary {
+  color: #007bff; /* Blue text color */
+}
+
+.alert {
+  border-radius: 0.5rem; /* Rounded alert */
+}
+
+.filter-input, .sort-select {
+  border-radius: 0.5rem; /* Rounded input and select */
+  border: 1px solid #007bff; /* Border color */
+}
+
+.filter-input:focus, .sort-select:focus {
+  border-color: #0056b3; /* Darker blue on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+}
+
+.list-group-item {
+  background-color: #e6f7ff; /* Light blue item background */
+  border: 1px solid #b3e0ff; /* Border for items */
+  border-radius: 0.5rem; /* Rounded item */
+  margin-bottom: 0.5rem; /* Spacing between items */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.list-group-item:hover {
+  background-color: #cceeff; /* Darker blue on hover */
+}
+
+.item-title {
+  color: #007bff; /* Title color */
+  font-weight: bold; /* Bold title */
+}
+
+.item-body {
+  color: #555; /* Body text color */
+}

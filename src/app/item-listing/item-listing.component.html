@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <h1 class="text-center text-primary">Item List</h1>
+
+
+
+  @if(errorMessage){
+  <div class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+}
+
+
+
+  @if(!errorMessage){
+  <div class="row mb-3" >
+    <div class="col-md-6">
+      <input type="text" class="form-control filter-input" placeholder="Filter items" [(ngModel)]="filterTerm" (input)="filterItems()" />
+    </div>
+    <div class="col-md-6">
+      <select class="form-control sort-select" [(ngModel)]="sortOrder" (change)="sortItems()">
+        <option value="asc">Sort by Title (A-Z)</option>
+        <option value="desc">Sort by Title (Z-A)</option>
+      </select>
+    </div>
+  </div>
+}
+
+
+@if(!errorMessage){
+  <div class="list-group" >
+
+
+    @for (item of filteredItems; track $index) {
+      <a  class="list-group-item list-group-item-action list-item">
+        <h5 class="item-title">Title: {{ item.title }}</h5>
+        <p class="item-body">Category: {{ item.category }}</p>
+        <p class="item-body">Category: {{ item.description }}</p>
+      </a>
+    }
+
+  </div>
+}
+</div>
+
